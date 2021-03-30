@@ -24,7 +24,7 @@
 
 .left-nav {
   grid-area: left-nav;
-  background-color:rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
 
   padding: 5px;
 
@@ -33,9 +33,21 @@
   grid-gap: 5px;
 }
 
+.left-nav-minimise {
+  grid-area: left-nav-minimise;
+  background-color: rgb(250, 250, 250);
+
+  padding: 5px;
+
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-gap: 5px;
+}
+
 .main {
   grid-area: main;
   background-color: rgb(255, 255, 255);
+  overflow: scroll;
 }
 
 .quick-settings {
@@ -46,7 +58,6 @@
 
   display: grid;
   grid-auto-rows: 50px;
-
 }
 
 .right-nav {
@@ -84,7 +95,10 @@
     display: grid;
     grid-template:
       "header header header" 40px
-      "left-nav main right-nav" 1fr /
+      "left-nav-minimise main right-nav" 1fr /
       30px 1fr 40px;
   }
-
+  .left-nav {
+    display: none;
+  }
+}

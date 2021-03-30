@@ -8,34 +8,66 @@
   grid-template:
     "left-nav header header" 40px
     "left-nav channels main" 1fr /
-    40px 100px 1fr;
+    40px 130px 1fr;
 
   height: 100vh;
 }
 
 .header {
   grid-area: header;
-  background-color: rgba(255, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.03);
+
+  display: grid;
+  grid-template-columns: 130px 1fr 20px 20px 20px 50px 20px 20px;
 }
 
 .left-nav {
   grid-area: left-nav;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 5px;
 }
 
 .main {
   grid-area: main;
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.05);
+
+  padding: 5px;
+
+  display: grid;
+  grid-auto-rows: 50px 1fr 30px;
+  grid-gap: 5px;
 }
 
 .channels {
   grid-area: channels;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+
+  padding: 5px;
+
+  display: grid;
+  grid-auto-rows: 5fr 5fr 5fr 5fr 30px;
+  grid-gap: 5px;
 }
 
-.right-nav {
-  grid-area: right-nav;
-  background-color: rgba(255, 0, 0, 0.4);
+.channels-minimise {
+  grid-area: .channels-minimise;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  padding: 5px;
+
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-gap: 5px;
+}
+
+.item {
+  border: solid 1px rgb(219, 219, 219);
+  display: grid;
+  place-items: center;
+  padding: 5px;
 }
 
 @media screen and (max-width: 500px) {
@@ -43,6 +75,10 @@
     display: grid;
     grid-template:
       "left-nav header header" 40px
-      "left-nav channels main" 1fr /
+      "left-nav channels-minimise main" 1fr /
       40px 40px 1fr;
   }
+  .channels {
+    display: none;
+  }
+}
