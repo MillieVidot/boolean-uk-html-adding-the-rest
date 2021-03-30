@@ -2,6 +2,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
+  font-size: 14px;
 }
 .container {
   display: grid;
@@ -15,7 +16,7 @@
 
 .header {
   grid-area: header;
-  background-color: rgba(255, 0, 0, 1);
+  background-color: rgb(253, 253, 253);
 
   display: grid;
   grid-template-columns: 50px 100px 1fr 50px 50px 50px 100px;
@@ -23,7 +24,7 @@
 
 .left-nav {
   grid-area: left-nav;
-  background-color: #ff000070;
+  background-color:rgb(250, 250, 250);
 
   padding: 5px;
 
@@ -34,12 +35,12 @@
 
 .main {
   grid-area: main;
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgb(255, 255, 255);
 }
 
 .quick-settings {
   grid-area: quick-settings;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgb(250, 250, 250);
 
   padding: 5px;
 
@@ -50,7 +51,7 @@
 
 .right-nav {
   grid-area: right-nav;
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(250, 250, 250);
 
   padding: 5px;
 
@@ -60,7 +61,7 @@
 }
 
 .item {
-  border: solid 1px black;
+  border: solid 1px rgb(219, 219, 219);
   display: grid;
   place-items: center;
 }
